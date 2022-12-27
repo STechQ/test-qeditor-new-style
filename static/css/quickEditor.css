@@ -1615,13 +1615,14 @@ input[type="checkbox"] {
 }
 
 .quickEditor .rightBlock .styles {
-  padding: 0 12px;
+  padding: 0 !important;
 }
 
 .quickEditor .style-value-field {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 8px 0;
 }
 
 .quickEditor .quick-style-prop-font {
