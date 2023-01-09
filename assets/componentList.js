@@ -720,6 +720,9 @@ var componentOptions = {
         ripple: {
             type: "boolean | object"
         },
+        small: {
+            type: Boolean
+        },
         tag: {
             type: String
         },
@@ -4539,6 +4542,9 @@ nextIcon = 'mdi-plus'}`
         },
         rows: {
             type: "number | string"
+        },
+        rounded: {
+            type: Boolean
         },
         rules: {
             type: "Array<any>"

@@ -379,11 +379,257 @@
   color: #E96767;
 }
 
-.quickEditor .cancelBtnModal {
-  color: #757575;
-  width: 90px !important;
-  height: 40px !important;
-}
+  
+  .quickEditor .contentBlock header i.errorCounter {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 99px;
+    background: #00c3b3;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px;
+    font-style: normal;
+    font-size: 16px;
+  }
+  
+  .quickEditor .checkWrapper {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 80%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .quickEditor .checkWrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .quickEditor .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fafbfc;
+    border-radius: 99px;
+    border: 1px solid #c1dced;
+  }
+  
+  .quickEditor .checkWrapper:hover input~.checkmark {
+    filter: contrast(0.9);
+  }
+  
+  .quickEditor .checkWrapper input:checked~.checkmark {
+    background-color: #2196f3;
+    border-color: #2196f3;
+  }
+  
+  .quickEditor .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .quickEditor .checkWrapper input:checked~.checkmark:after {
+    display: block;
+  }
+  
+  .quickEditor .checkWrapper .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .quickEditor .miniPopUp {
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    padding: 15px;
+    background: #fff;
+    z-index: 11;
+  }
+  
+  .quickEditor .miniPopUp .checkList li {
+    border-top: 1px solid #e1eef6;
+    padding: 10px 8px 0 8px !important;
+  }
+  
+  .quickEditor .miniPopUp .checkList li i {
+    position: absolute;
+    top: 12px;
+    right: 4px;
+  }
+  
+  .quickEditor .bigPopUp {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.65);
+  }
+  
+  .quickEditor .bigPopUp .content {
+    width: calc(100% - 200px);
+    margin: 0 100px;
+  }
+  .quickEditor .bigPopUp header {
+    width: calc(100% - 200px);
+    margin: 20px 100px 0;
+  }
+  
+  .quickEditor .bigPopUp .content {
+    background: #ffffff;
+    overflow: auto;
+    min-height: 500px;
+    max-height: calc(100vh - 100px);
+  }
+  
+  .quickEditor .bigPopUp .content>ul {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #e1eef6;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .quickEditor .bigPopUp .content ul.sub {
+    padding: 0 0 0 20px;
+    margin: 0;
+  }
+  
+  .quickEditor .bigPopUp .content li {
+    padding: 5px 0;
+  }
+  
+  .quickEditor .bigPopUp .content ul.sub li {
+    border-bottom: 1px solid #e1eef6;
+  }
+  
+  .quickEditor .bigPopUp .content ul.sub li:last-child {
+    border-bottom: 0;
+  }
+  
+  .quickEditor .bigPopUp .content table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    font-size: 80%;
+  }
+  
+  .quickEditor .bigPopUp .content table th {
+    padding: 10px;
+    border-right: 1px solid #fff;
+    background: #e1eef6;
+  }
+  
+  .quickEditor .bigPopUp .content table th:last-child {
+    border-right: 0;
+  }
+  
+  .quickEditor .bigPopUp .content table td {
+    padding: 10px;
+    border: 1px solid #e1eef6;
+    border-left: 0;
+  }
+  
+  .quickEditor .bigPopUp .content table td:first-child {
+    border-left: 1px solid #e1eef6;
+  }
+  
+  .quickEditor .bigPopUp .content table tr {
+    border: 1px solid #e1eef6;
+  }
+  
+  .quickEditor .bigPopUp .content li.tip {
+    background: #e1eef6;
+    padding: 5px 15px;
+  }
+  
+  .quickEditor .bigPopUp .content h4 {
+    margin: 5px 0;
+  }
+  
+  .quickEditor .bigPopUp .content .sub h4 {
+    font-size: 80%;
+    display: inline-block;
+    width: 30%;
+    margin: 0;
+  }
+  
+  .quickEditor .bigPopUp .content p {
+    margin: 5px 0;
+    font-size: 80%;
+  }
+  
+  .quickEditor .bigPopUp .content .sub p {
+    display: inline-block;
+    width: 65%;
+    margin: 0;
+  }
+  
+  .quickEditor .bigPopUp header {
+    background: #ffffff;
+    color: #212121;
+    font-weight: 600;
+    height: auto;
+    padding: 10px 15px 8px 15px;
+    border-bottom: 1px solid #E3E3E3;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .quickEditor .bigPopUp header span {
+    line-height: 30px;
+    font-size: 20px;
+  }
+  
+  .quickEditor .bigPopUp header i {
+    font-size: 14px;
+    text-align: center;
+  }
+  .quickEditor .rightBlock .prop-collapsible i:nth-child(2) {
+    display: none;
+  }
+  .quickEditor .rightBlock .prop-collapsible.active i:nth-child(1) {
+    display: none;
+  }
+  .quickEditor .rightBlock .prop-collapsible.active i:nth-child(2) {
+    display: unset;
+  }
+  .quickEditor .bigPopUp header i:before {
+    vertical-align: -webkit-baseline-middle;
+  }
+  
+  .quickEditor .bigPopUp header ul {
+    padding: 0;
+    float: right;
+  }
+  
+  .quickEditor .bigPopUp header ul li {
+    display: inline-block;
+    margin: 0 5px;
+    float: left;
+  }
 
 .quickEditor .deleteBtnModal {
   width: 95px;
